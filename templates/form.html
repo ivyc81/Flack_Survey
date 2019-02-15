@@ -2,12 +2,12 @@
 
 {% block form %}
 
-<form action="{{ next_question }}" method="['POST']">
+<form action="/questions/{{ question_num + 1 }}" method="POST">
     <div>
       {{ question[0] }} 
         <div>
-            <input type="radio" value="{{ question[1] }}"> {{ question[1] }}
-            <input type="radio" value="{{ question[2] }}"> {{ question[2] }}
+            <input type="radio" name="choice" value="{{ question[1] }}"> {{ question[1] }}
+            <input type="radio" name="choice" value="{{ question[2] }}"> {{ question[2] }}
         </div>
 ​    </div>
 
