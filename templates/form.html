@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block form %}
+
+<form action="{{ next_question }}" method="['POST']">
+    <div>
+      {{ question[0] }} 
+        <div>
+            <input type="radio" value="{{ question[1] }}"> {{ question[1] }}
+            <input type="radio" value="{{ question[2] }}"> {{ question[2] }}
+        </div>
+​    </div>
+
+    <button>Next</button>
+
+{% endblock %}
+
